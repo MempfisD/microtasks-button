@@ -1,31 +1,33 @@
 import React from 'react'
 import './App.css'
-import { Button } from './components/Button'
 
 function App() {
-	const Button1Foo = (subscriber: string, age: number) => {
-		console.log(subscriber, age)
+	// const myFirstSub = (event: MouseEvent<HTMLButtonElement>) => {
+	// 	console.log('Hi Mi')
+	// }
+	// const mySecondSub = (event: MouseEvent<HTMLButtonElement>) => {
+	// 	console.log('Dima')
+	// }
+	// const onClickHandler = (name: string) => {
+	// 	console.log(name)
+	// }
+
+	const foo1 = () => {
+		console.log(100200)
 	}
-	const Button2Foo = (subscriber: string, age: number) => {
-		console.log(subscriber, age)
-	}
-	const Button3Foo = () => {
-		console.log('I`m stupid button')
+	const foo2 = (num: number) => {
+		console.log(num)
 	}
 	return (
 		<div className='App'>
-			<Button
-				name={'MyYouTubeChanel-1'}
-				callback={() => Button1Foo('I`m Dima', 21)}
-			/>
-			<Button
-				name={'MyYouTubeChanel-2'}
-				callback={() => Button2Foo('I`m Tanya', 22)}
-			/>
-			<Button
-				name={'MyYouTubeChanel-2'}
-				callback={Button3Foo}
-			/>
+			{/*<button onClick={(event) => {*/}
+			{/*	console.log('Hi')*/}
+			{/*}}>MyYoutubeChanel-1*/}
+			{/*</button>*/}
+			{/* <button onClick={() => onClickHandler('Dima')}>MyYoutubeChanel-1</button>
+			<button onClick={() => onClickHandler('Tanya')}>MyYoutubeChanel-2</button> */}
+			<button onClick={foo1}>1</button>
+			<button onClick={() => foo2(100200)}>2</button>
 		</div>
 	)
 }
